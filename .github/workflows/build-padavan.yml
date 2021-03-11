@@ -71,13 +71,24 @@ jobs:
         # 因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ###################################################################################################
         sed -i '/CONFIG_FIRMWARE_INCLUDE_LANG_UK/d' configs/templates/$TNAME.config      #删除配置项英文界面
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_QOS/d' configs/templates/$TNAME.config          #删除配置项QOS
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENVPN/d' configs/templates/$TNAME.config      #删除配置项OPENVPN
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' configs/templates/$TNAME.config       #删除配置项XUPNPD
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DOGCOM/d' configs/templates/$TNAME.config       #删除配置项DOGCOM
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' configs/templates/$TNAME.config  #删除配置项SS plus+
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER/d' configs/templates/$TNAME.config #删除配置项DNSFORWARDER
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' configs/templates/$TNAME.config         #删除配置项TTYD
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' configs/templates/$TNAME.config       #删除配置项SRELAY
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SOCAT/d' configs/templates/$TNAME.config        #删除配置项SOCAT
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_MTR/d' configs/templates/$TNAME.config          #删除配置项MTR
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_IPERF3/d' configs/templates/$TNAME.config       #删除配置项IPERF3
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NANO/d' configs/templates/$TNAME.config         #删除配置项NANO
         sed -i '/CONFIG_FIRMWARE_INCLUDE_HTOP/d' configs/templates/$TNAME.config         #删除配置项HTOP
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_LRZSZ/d' configs/templates/$TNAME.config        #删除配置项LRZSZ
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_CURL/d' configs/templates/$TNAME.config         #删除配置项CURL
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TCPDUMP/d' configs/templates/$TNAME.config      #删除配置项TCPDUMP
         sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' configs/templates/$TNAME.config     #删除配置项EAP_PEAP
+        
         ####################################################################
         # 以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件。
         ####################################################################
