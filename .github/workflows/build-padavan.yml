@@ -78,7 +78,6 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS/d' configs/templates/$TNAME.config  #删除配置项SS plus+
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER/d' configs/templates/$TNAME.config #删除配置项DNSFORWARDER
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' configs/templates/$TNAME.config       #删除配置项SRELAY
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SOCAT/d' configs/templates/$TNAME.config        #删除配置项SOCAT
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MTR/d' configs/templates/$TNAME.config          #删除配置项MTR
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPERF3/d' configs/templates/$TNAME.config       #删除配置项IPERF3
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NANO/d' configs/templates/$TNAME.config         #删除配置项NANO
@@ -106,7 +105,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> configs/templates/$TNAME.config         #删除网页终端模拟器TTYD
         echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=y" >> configs/templates/$TNAME.config       #删除用于二级路由、教育网分发IPv6地址的NAPT66
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> configs/templates/$TNAME.config       #删除SRELAY
-        echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> configs/templates/$TNAME.config        #删除工具SOCAT
+        echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> configs/templates/$TNAME.config        #删除工具SOCAT
         echo "CONFIG_FIRMWARE_INCLUDE_MTR=n" >> configs/templates/$TNAME.config          #删除工具MTR
         echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> configs/templates/$TNAME.config       #删除工具IPERF3
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> configs/templates/$TNAME.config         #删除工具NANO
